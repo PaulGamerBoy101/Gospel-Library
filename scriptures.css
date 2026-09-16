@@ -1,0 +1,177 @@
+/* ========================================
+   Scriptures Page
+   ======================================== */
+
+.scriptures-page {
+  width: min(1100px, 88vw);
+  margin: 0 auto;
+  padding: 64px 0 80px;
+}
+
+
+/* Page heading */
+
+.page-heading {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+
+.page-heading .eyebrow {
+  margin: 0 0 10px;
+
+  color: var(--accent);
+
+  font-size: 0.8rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.page-heading h1 {
+  margin: 0;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+}
+
+.page-heading p {
+  margin: 18px 0 0;
+
+  color: var(--muted);
+
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+
+/* Scripture cards */
+
+.scripture-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+.scripture-card {
+  min-height: 190px;
+
+  padding: 30px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 20px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 20px;
+
+  box-shadow: var(--shadow);
+
+  text-decoration: none;
+
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
+}
+
+
+.scripture-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #bdcbd5;
+
+  box-shadow:
+    0 14px 32px rgba(23, 33, 43, 0.12);
+}
+
+
+/* Card icon */
+
+.scripture-icon {
+  width: 75px;
+  height: 75px;
+
+  flex: 0 0 58px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 15px;
+
+  background: #eaf0f4;
+
+  color: var(--accent-dark);
+
+  font-size: 1.65rem;
+}
+.scripture-icon img{
+  width: 75px;
+  height: 75px;
+
+  flex: 0 0 58px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 15px;
+
+  background: #eaf0f4;
+
+  color: var(--accent-dark);
+
+  font-size: 1.65rem;
+}
+
+
+/* Card text */
+
+.scripture-card-content {
+  min-width: 0;
+}
+
+.scripture-card h2 {
+  margin: 3px 0 0;
+
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
+.scripture-card p {
+  margin: 9px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+  .scriptures-page {
+    padding-top: 44px;
+  }
+
+  .scripture-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scripture-card {
+    min-height: 155px;
+
+    padding: 24px;
+  }
+
+}
